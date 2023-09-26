@@ -1,0 +1,60 @@
+package com.ironhidegames.android.myapplication.ui
+
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import com.ironhidegames.android.myapplication.R
+import com.ironhidegames.android.myapplication.databinding.FragmentNoInternetBinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
+
+class NoInternetFragment : Fragment() {
+
+    private lateinit var binding: FragmentNoInternetBinding
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentNoInternetBinding
+            .bind(inflater.inflate(R.layout.fragment_no_internet, container, false))
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.swipeLayout.setOnRefreshListener {
+            lifecycleScope.launch {
+                while (isActive) {
+                    delay(100)
+                    if (isNetworkAvailable()) {
+                        binding.swipeLayout.isRefreshing = false
+                        findNavController().popBackStack()
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    private fun isNetworkAvailable(): Boolean {
+        val connectivityManager = requireActivity().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetworkInfo: NetworkInfo? = connectivityManager.activeNetworkInfo
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected
+    }
+}
