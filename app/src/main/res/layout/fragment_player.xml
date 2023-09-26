@@ -162,245 +162,254 @@
             tools:ignore="HardcodedText"
             tools:targetApi="31" />
 
-        <RelativeLayout
-            android:id="@+id/llAge"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/edit_text_bg"
-            android:orientation="horizontal"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
+            android:id="@+id/linearLayoutPlayerData"
             app:layout_constraintTop_toBottomOf="@id/tvGeneral">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:id="@+id/llAge"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_600"
-                android:text="Age"
-                android:textColor="@color/toolbar_color"
-                android:textFontWeight="600"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText"
-                tools:targetApi="31" />
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_bg"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGeneral">
 
-            <TextView
-                android:id="@+id/tvAge"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_600"
+                    android:text="Age"
+                    android:textColor="@color/toolbar_color"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="31" />
+
+                <TextView
+                    android:id="@+id/tvAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/roboto_600"
+                    android:text="18"
+                    android:textColor="@color/progress_color"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="31" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/llBirthDate"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/roboto_600"
-                android:text="18"
-                android:textColor="@color/progress_color"
-                android:textFontWeight="600"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText"
-                tools:targetApi="31" />
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_bg"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llAge">
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_600"
+                    android:text="Birth Date"
+                    android:textColor="@color/toolbar_color"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="31" />
 
-        <RelativeLayout
-            android:id="@+id/llBirthDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/edit_text_bg"
-            android:orientation="horizontal"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/llAge">
+                <TextView
+                    android:id="@+id/tvBirthDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/roboto_600"
+                    android:text="1992-02-05"
+                    android:textColor="@color/progress_color"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="31" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/llBirthPlace"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_600"
-                android:text="Birth Date"
-                android:textColor="@color/toolbar_color"
-                android:textFontWeight="600"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText"
-                tools:targetApi="31" />
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_bg"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llBirthDate">
 
-            <TextView
-                android:id="@+id/tvBirthDate"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_600"
+                    android:text="Birth Place"
+                    android:textColor="@color/toolbar_color"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="31" />
+
+                <TextView
+                    android:id="@+id/tvBirthPlace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/roboto_600"
+                    android:text="Mogi das Cruzes"
+                    android:textColor="@color/progress_color"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="31" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/llBirthCountry"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/roboto_600"
-                android:text="1992-02-05"
-                android:textColor="@color/progress_color"
-                android:textFontWeight="600"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText"
-                tools:targetApi="31" />
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_bg"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llBirthPlace">
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_600"
+                    android:text="Birth Country"
+                    android:textColor="@color/toolbar_color"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="31" />
 
-        <RelativeLayout
-            android:id="@+id/llBirthPlace"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/edit_text_bg"
-            android:orientation="horizontal"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/llBirthDate">
+                <TextView
+                    android:id="@+id/tvBirthCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/roboto_600"
+                    android:text="Country"
+                    android:textColor="@color/progress_color"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="31" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/llHeight"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_600"
-                android:text="Birth Place"
-                android:textColor="@color/toolbar_color"
-                android:textFontWeight="600"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText"
-                tools:targetApi="31" />
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_bg"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llBirthCountry">
 
-            <TextView
-                android:id="@+id/tvBirthPlace"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_600"
+                    android:text="Height"
+                    android:textColor="@color/toolbar_color"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="31" />
+
+                <TextView
+                    android:id="@+id/tvHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/roboto_600"
+                    android:text="175cm"
+                    android:textColor="@color/progress_color"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="31" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/llWeight"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/roboto_600"
-                android:text="Mogi das Cruzes"
-                android:textColor="@color/progress_color"
-                android:textFontWeight="600"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText"
-                tools:targetApi="31" />
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_bg"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llBirthCountry">
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_600"
+                    android:text="Weight"
+                    android:textColor="@color/toolbar_color"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="31" />
 
-        <RelativeLayout
-            android:id="@+id/llBirthCountry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/edit_text_bg"
-            android:orientation="horizontal"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/llBirthPlace">
+                <TextView
+                    android:id="@+id/tvWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/roboto_600"
+                    android:text="68kg"
+                    android:textColor="@color/progress_color"
+                    android:textFontWeight="600"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="31" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_600"
-                android:text="Birth Country"
-                android:textColor="@color/toolbar_color"
-                android:textFontWeight="600"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText"
-                tools:targetApi="31" />
+            </RelativeLayout>
+        </LinearLayout>
 
-            <TextView
-                android:id="@+id/tvBirthCountry"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/roboto_600"
-                android:text="Country"
-                android:textColor="@color/progress_color"
-                android:textFontWeight="600"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText"
-                tools:targetApi="31" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/llHeight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/edit_text_bg"
-            android:orientation="horizontal"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/llBirthCountry">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_600"
-                android:text="Height"
-                android:textColor="@color/toolbar_color"
-                android:textFontWeight="600"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText"
-                tools:targetApi="31" />
-
-            <TextView
-                android:id="@+id/tvHeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/roboto_600"
-                android:text="175cm"
-                android:textColor="@color/progress_color"
-                android:textFontWeight="600"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText"
-                tools:targetApi="31" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/llWeight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/edit_text_bg"
-            android:orientation="horizontal"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/llBirthCountry">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_600"
-                android:text="Weight"
-                android:textColor="@color/toolbar_color"
-                android:textFontWeight="600"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText"
-                tools:targetApi="31" />
-
-            <TextView
-                android:id="@+id/tvWeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/roboto_600"
-                android:text="68kg"
-                android:textColor="@color/progress_color"
-                android:textFontWeight="600"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText"
-                tools:targetApi="31" />
-
-        </RelativeLayout>
 
         <TextView
             android:id="@+id/tvMoreInfo"
@@ -414,7 +423,7 @@
             android:textFontWeight="400"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/llWeight"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutPlayerData"
             tools:ignore="HardcodedText"
             tools:targetApi="31" />
 

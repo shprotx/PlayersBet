@@ -4,14 +4,10 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView.OnQueryTextListener
 import androidx.appcompat.widget.SearchView
-import androidx.core.content.ContextCompat.getSystemService
-import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -25,7 +21,6 @@ import com.ironhidegames.android.myapplication.api.players.Players
 import com.ironhidegames.android.myapplication.api.players.Response
 import com.ironhidegames.android.myapplication.common.OnPlayerClickedListener
 import com.ironhidegames.android.myapplication.data.DataHolder
-import com.ironhidegames.android.myapplication.data.DataHolder.getPlayers
 import com.ironhidegames.android.myapplication.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
@@ -133,10 +128,7 @@ class HomeFragment : Fragment(), OnPlayerClickedListener {
         val list = mutableListOf<Response>()
         allPlayers.forEach {
             it?.response?.forEach { response ->
-                response.statistics.forEach { statistic ->
-                    if (statistic.league.id == 416 && list.size < 10)
-                        list.add(response)
-                }
+                list.add(response)
             }
         }
         holder.isAllDataCollected = true
